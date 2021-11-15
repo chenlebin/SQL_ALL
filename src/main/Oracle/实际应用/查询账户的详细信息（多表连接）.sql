@@ -1,0 +1,4 @@
+SELECT u."UID", u.UNAME, u.ULX, u.UPWD, x.UXB, x.USF, x.UYX
+FROM T_YHUSER u
+         INNER JOIN T_YHXINXI x on u."UID" = x."UID"
+WHERE u."UID" = 1008631

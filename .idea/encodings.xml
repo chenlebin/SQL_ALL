@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/01SQLcode.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/02选择，投影SQL.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/03子查询，in，betweenand.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/04子查询，any，all.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/05子查询，复习all，any，表别名.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/06多表关联，字段别名，表别名.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/07多表关联外连接.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/10PLSQL语法，分页.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-1PLSQL编程：游标存放多行记录.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-2PLSQL编程两种变量、if、loop、while、for.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-3函数cursor (2).sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-3函数cursor.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/12-存储过程(函数).sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/Oracle高级部分.sql" charset="GBK" />
+  </component>
+</project>

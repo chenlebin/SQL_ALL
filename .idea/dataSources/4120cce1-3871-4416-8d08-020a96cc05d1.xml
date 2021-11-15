@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="localhost">
+  <database-model serializer="dbm" dbms="UNKNOWN" family-id="UNKNOWN" format-version="4.20">
+    <root id="1">
+      <ServerVersion>0.0</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <database id="2" parent="1" name="2021_zrb"/>
+    <database id="3" parent="1" name="db_df2"/>
+    <database id="4" parent="1" name="db_df_001"/>
+    <database id="5" parent="1" name="db_df_zrb"/>
+    <database id="6" parent="1" name="db_laocaigou"/>
+    <database id="7" parent="1" name="information_schema"/>
+    <database id="8" parent="1" name="mysql"/>
+    <database id="9" parent="1" name="test"/>
+    <database id="10" parent="1"/>
+    <schema id="11" parent="2">
+      <Current>1</Current>
+    </schema>
+    <schema id="12" parent="3">
+      <Current>1</Current>
+    </schema>
+    <schema id="13" parent="5">
+      <Current>1</Current>
+    </schema>
+    <table id="14" parent="11" name="usa_datedr"/>
+    <table id="15" parent="11" name="usa_sc"/>
+    <table id="16" parent="11" name="usa_zong"/>
+    <table id="17" parent="11" name="usa_zong_1000"/>
+    <table id="18" parent="12" name="daoche"/>
+    <table id="19" parent="12" name="productdao"/>
+    <table id="20" parent="12" name="t_baidu"/>
+    <table id="21" parent="12" name="t_clb"/>
+    <table id="22" parent="12" name="t_clbjavaweb"/>
+    <table id="23" parent="12" name="t_ganfan"/>
+    <table id="24" parent="12" name="t_guanliyuan(yinhang)"/>
+    <table id="25" parent="12" name="t_jhk"/>
+    <table id="26" parent="12" name="t_lx"/>
+    <table id="27" parent="12" name="t_mybatis_user"/>
+    <table id="28" parent="12" name="t_nvzhuang"/>
+    <table id="29" parent="12" name="t_product"/>
+    <table id="30" parent="12" name="t_school"/>
+    <table id="31" parent="12" name="t_student"/>
+    <table id="32" parent="12" name="t_students"/>
+    <table id="33" parent="12" name="t_user"/>
+    <table id="34" parent="12" name="t_xianhua"/>
+    <table id="35" parent="12" name="t_yb"/>
+    <table id="36" parent="12" name="t_yh"/>
+    <table id="37" parent="12" name="t_yhuser"/>
+    <table id="38" parent="12" name="t_yhxx"/>
+    <table id="39" parent="12" name="t_yhzc"/>
+    <table id="40" parent="12" name="t_yonghu"/>
+    <table id="41" parent="12" name="usa_datedr"/>
+    <table id="42" parent="12" name="usa_sc"/>
+    <table id="43" parent="12" name="usa_zong"/>
+    <table id="44" parent="12" name="usa_zong_1000"/>
+    <table id="45" parent="12" name="z_yiqing"/>
+    <table id="46" parent="13" name="usa"/>
+    <table id="47" parent="13" name="usa_copy"/>
+    <column id="48" parent="14" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="49" parent="14" name="date">
+      <Position>2</Position>
+      <Comment>时间</Comment>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="50" parent="14" name="dr">
+      <Position>3</Position>
+      <Comment>死亡率</Comment>
+      <DataType>FLOAT(10,4)|7s</DataType>
+    </column>
+    <index id="51" parent="14" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="14" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="15" name="uid">
+      <Position>1</Position>
+      <Comment>序号</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="54" parent="15" name="state">
+      <Position>2</Position>
+      <Comment>州</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="55" parent="15" name="county">
+      <Position>3</Position>
+      <Comment>区县</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="56" parent="15" name="cases">
+      <Position>4</Position>
+      <Comment>截止该日期该区县的累计确诊人数</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="57" parent="15" name="deaths">
+      <Position>5</Position>
+      <Comment>截止该日期该区县的累计死亡人数</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+    </column>
+    <index id="58" parent="15" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="59" parent="15" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="16" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="61" parent="16" name="date">
+      <Position>2</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="62" parent="16" name="state">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="63" parent="16" name="county">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="64" parent="16" name="cases">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="65" parent="16" name="deaths">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="66" parent="16" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="16" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="68" parent="17" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="69" parent="17" name="date">
+      <Position>2</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="70" parent="17" name="state">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="71" parent="17" name="county">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="72" parent="17" name="cases">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="73" parent="17" name="deaths">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="74" parent="17" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="75" parent="17" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="76" parent="18" name="juli">
+      <Position>1</Position>
+      <DataType>CHAR(20)|1s</DataType>
+    </column>
+    <column id="77" parent="18" name="gq">
+      <Position>2</Position>
+      <DataType>CHAR(20)|1s</DataType>
+    </column>
+    <column id="78" parent="19" name="uname">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="79" parent="19" name="jiage">
+      <Position>2</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="80" parent="19" name="PRIMARY">
+      <ColNames>uname</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="81" parent="19" name="PRIMARY">
+      <ColNames>uname</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="82" parent="20" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="83" parent="20" name="ct">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="84" parent="20" name="sy">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="85" parent="20" name="fzlc">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="86" parent="20" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="20" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="88" parent="21" name="yx">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="89" parent="21" name="zy">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="90" parent="21" name="bj">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="91" parent="21" name="kc">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="92" parent="21" name="xm">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="93" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <index id="94" parent="22" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="22" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="96" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="97" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="98" parent="23" name="rq">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="99" parent="23" name="money">
+      <Position>4</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="100" parent="23" name="qcid">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <index id="101" parent="23" name="PRIMARY">
+      <ColNames>qcid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="102" parent="23" name="PRIMARY">
+      <ColNames>qcid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="103" parent="24" name="uid">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="104" parent="24" name="uname">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="105" parent="24" name="ulx">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="106" parent="24" name="upwd">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="107" parent="24" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="108" parent="24" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="109" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="110" parent="25" name="zz">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="111" parent="25" name="zh">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="112" parent="25" name="time">
+      <Position>4</Position>
+      <DataType>FLOAT(12)|7s</DataType>
+    </column>
+    <column id="113" parent="25" name="je">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="114" parent="25" name="ll">
+      <Position>6</Position>
+      <DataType>FLOAT(12)|7s</DataType>
+    </column>
+    <column id="115" parent="25" name="bjlx">
+      <Position>7</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="116" parent="25" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="117" parent="25" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="118" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="119" parent="26" name="zh">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="120" parent="26" name="mm">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="121" parent="26" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="122" parent="26" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="123" parent="27" name="m_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="124" parent="27" name="m_uname">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="125" parent="27" name="m_upwd">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="126" parent="27" name="PRIMARY">
+      <ColNames>m_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="127" parent="27" name="PRIMARY">
+      <ColNames>m_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="128" parent="28" name="tks">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="129" parent="28" name="tid">
+      <Position>2</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="130" parent="28" name="tjg">
+      <Position>3</Position>
+      <DataType>FLOAT(12)|7s</DataType>
+    </column>
+    <column id="131" parent="28" name="tsl">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="132" parent="28" name="tpp">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="133" parent="28" name="PRIMARY">
+      <ColNames>tid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="28" name="PRIMARY">
+      <ColNames>tid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="135" parent="29" name="pid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="136" parent="29" name="pname">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="137" parent="29" name="pprice">
+      <Position>3</Position>
+      <DataType>FLOAT(12)|7s</DataType>
+    </column>
+    <column id="138" parent="29" name="pfactory">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="139" parent="29" name="PRIMARY">
+      <ColNames>pid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="140" parent="29" name="PRIMARY">
+      <ColNames>pid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="141" parent="30" name="x_name">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="142" parent="30" name="x_wz">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="143" parent="30" name="x_js">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="144" parent="31" name="stuid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="145" parent="31" name="stuname">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="146" parent="31" name="stuage">
+      <Position>3</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="147" parent="31" name="PRIMARY">
+      <ColNames>stuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="148" parent="31" name="PRIMARY">
+      <ColNames>stuid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="149" parent="32" name="stu_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="150" parent="32" name="stu_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="151" parent="32" name="stu_city">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="152" parent="32" name="PRIMARY">
+      <ColNames>stu_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="153" parent="32" name="PRIMARY">
+      <ColNames>stu_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="154" parent="33" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="155" parent="33" name="uname">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="156" parent="33" name="Dwd">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="157" parent="34" name="lx">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="158" parent="34" name="ds">
+      <Position>2</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="159" parent="34" name="cj">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="160" parent="34" name="fs">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="161" parent="34" name="id">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <index id="162" parent="34" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="163" parent="34" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="164" parent="35" name="tname">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="165" parent="35" name="tcj">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="166" parent="36" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="167" parent="36" name="yh">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="168" parent="36" name="mm">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="169" parent="36" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="170" parent="36" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="171" parent="37" name="uid">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="172" parent="37" name="uname">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="173" parent="37" name="ulx">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="174" parent="37" name="upwd">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="175" parent="37" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="176" parent="37" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="177" parent="38" name="uidsum">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="178" parent="38" name="yesum">
+      <Position>2</Position>
+      <DataType>FLOAT(255,2)|7s</DataType>
+    </column>
+    <column id="179" parent="39" name="uid">
+      <Position>1</Position>
+      <DataType>VARCHAR(11)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="180" parent="39" name="ye">
+      <Position>2</Position>
+      <DataType>FLOAT(30,2)|7s</DataType>
+    </column>
+    <column id="181" parent="39" name="kh">
+      <Position>3</Position>
+      <Comment>将uid的前缀10086改成10010后缀部分不变就为卡号</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="182" parent="39" name="cqk">
+      <Position>4</Position>
+      <DataType>FLOAT(30,2)|7s</DataType>
+    </column>
+    <index id="183" parent="39" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="184" parent="39" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="185" parent="39" name="å¤&#x96;é&#x94;®">
+      <ColNames>uid</ColNames>
+      <RefTableName>t_yhuser</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>uid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="186" parent="40" name="tname">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="187" parent="40" name="tcj">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="188" parent="41" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="189" parent="41" name="date">
+      <Position>2</Position>
+      <Comment>时间</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="190" parent="41" name="dr">
+      <Position>3</Position>
+      <Comment>死亡率</Comment>
+      <DataType>FLOAT(10,4)|7s</DataType>
+    </column>
+    <index id="191" parent="41" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="192" parent="41" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="193" parent="42" name="uid">
+      <Position>1</Position>
+      <Comment>序号</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="194" parent="42" name="state">
+      <Position>2</Position>
+      <Comment>州</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="195" parent="42" name="county">
+      <Position>3</Position>
+      <Comment>区县</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="196" parent="42" name="cases">
+      <Position>4</Position>
+      <Comment>截止该日期该区县的累计确诊人数</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="197" parent="42" name="deaths">
+      <Position>5</Position>
+      <Comment>截止该日期该区县的累计死亡人数</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+    </column>
+    <index id="198" parent="42" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="199" parent="42" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="200" parent="43" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="201" parent="43" name="date">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="202" parent="43" name="state">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="203" parent="43" name="county">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="204" parent="43" name="cases">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="205" parent="43" name="deaths">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="206" parent="43" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="207" parent="43" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="208" parent="44" name="uid">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="209" parent="44" name="date">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="210" parent="44" name="state">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="211" parent="44" name="county">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="212" parent="44" name="cases">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="213" parent="44" name="deaths">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="214" parent="44" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="215" parent="44" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="216" parent="45" name="uid">
+      <Position>1</Position>
+      <Comment>序号</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="217" parent="45" name="data">
+      <Position>2</Position>
+      <Comment>日期</Comment>
+      <DataType>DATE(10)|91s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="218" parent="45" name="state">
+      <Position>3</Position>
+      <Comment>州</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="219" parent="45" name="county">
+      <Position>4</Position>
+      <Comment>区县</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="220" parent="45" name="cases">
+      <Position>5</Position>
+      <Comment>截止该日期该区县的累计确诊人数</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="221" parent="45" name="deaths">
+      <Position>6</Position>
+      <Comment>截止该日期该区县的累计死亡人数</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+    </column>
+    <index id="222" parent="45" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="223" parent="45" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="224" parent="46" name="uid">
+      <Position>1</Position>
+      <Comment>序号</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="225" parent="46" name="data">
+      <Position>2</Position>
+      <Comment>日期</Comment>
+      <DataType>DATE(10)|91s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="226" parent="46" name="state">
+      <Position>3</Position>
+      <Comment>州</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="227" parent="46" name="county">
+      <Position>4</Position>
+      <Comment>区县</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="228" parent="46" name="cases">
+      <Position>5</Position>
+      <Comment>截止该日期该区县的累计确诊人数</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="229" parent="46" name="deaths">
+      <Position>6</Position>
+      <Comment>截止该日期该区县的累计死亡人数</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+    </column>
+    <column id="230" parent="46" name="dr">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="231" parent="46" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="232" parent="46" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="233" parent="47" name="uid">
+      <Position>1</Position>
+      <Comment>序号</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="234" parent="47" name="data">
+      <Position>2</Position>
+      <Comment>日期</Comment>
+      <DataType>DATE(10)|91s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="235" parent="47" name="state">
+      <Position>3</Position>
+      <Comment>州</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="236" parent="47" name="county">
+      <Position>4</Position>
+      <Comment>区县</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="237" parent="47" name="cases">
+      <Position>5</Position>
+      <Comment>截止该日期该区县的累计确诊人数</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="238" parent="47" name="deaths">
+      <Position>6</Position>
+      <Comment>截止该日期该区县的累计死亡人数</Comment>
+      <DataType>INT UNSIGNED(10)|4s</DataType>
+    </column>
+    <column id="239" parent="47" name="dr">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="240" parent="47" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="241" parent="47" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
