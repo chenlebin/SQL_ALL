@@ -76,6 +76,7 @@ from db_df2.wzry_hero_part;
 
 
 //查询主要定位role_main为射手archer，并且最大生命大于6000的信息
+-- todo 这里查询的就不是全表查询了而是分区查询，查询分区字段role等于'archer'中的数据文件，提高了查询效率
 select *
 from db_df2.wzry_hero_part
 where role = 'archer'

@@ -3,7 +3,7 @@ use db_df2;
 show tables;
 
 /* 事务表注意事项：
- todo clustered by (id) into 2 buckets stored as orc TBLPROPERTIES('transactional'='true');
+ todo： clustered by (id) into 2 buckets stored as orc TBLPROPERTIES('transactional'='true');
   必须为分桶表
   必须为orc文件格式
   表参数 transactional必须为true  TBLPROPERTIES('transactional'='true');
