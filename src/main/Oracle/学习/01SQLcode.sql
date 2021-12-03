@@ -57,7 +57,7 @@ where s_id = 19104009;
 select *
 from student_one
 where s_id > 19104008
-  and zhuzhi = '江西省抚州市乐安县'
+  and zhuzhi = '江西省抚州市乐安县';
 
 select *
 from student_one;

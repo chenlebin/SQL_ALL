@@ -3,23 +3,80 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/Hive/00_练习/00_分区分桶事务表练习.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/00_练习/01_Count.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/00_Hive中文乱码.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/00_Hive自带查询语法.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/01_原生数据类型使用.SQL" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/02_复杂数据类型使用.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/03_默认分隔符001.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/04_Location的使用.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/05_内部表外部表.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/06_分区表静态分区.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/07_多重分区.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/08_动态分区.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/09_分桶表.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/10_分桶数据加载.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/11_事务表.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/12_视图.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/13_物化视图.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/14_物化视图查询重写.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL/15_数据库相关DDL语言.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/00_Hive中文乱码.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/00_Hive自带查询语法.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/01_原生数据类型使用.SQL" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/02_复杂数据类型使用.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/03_默认分隔符001.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/04_Location的使用.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/05_内部表外部表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/06_分区表静态分区.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/07_多重分区.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/08_动态分区.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/09_分桶表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/10_分桶数据加载.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/11_事务表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/12_视图.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/13_物化视图.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/14_物化视图查询重写.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/15_数据库相关DDL语言.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/16_表相关DDL语言.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/17_分区相关DDL语言.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/18_show相关查看语句.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/01_load加载数据.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/02_insert+select插入数据.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/03_Multiple Insert多重插入.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/04_Dynamic Partition Inserts动态分区插入.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/05_insert Directory导出数据.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/06_事务表的使用.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/01_select语句树.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/02_创建查询环境USA_Covid疫情查询.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/03_select查询基础语法.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/04_select查询高阶语法-排序.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/05_Union联合查询.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/06_form子查询where子查询.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/07_CTE临时结果集.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/08_Join语法规则树.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/09_Join语法环境准备.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/10_Join的6种join方式.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/03_DQL数据查询语言/11_Join连接注意事项.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/01_内置函数_字符串函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/02_内置函数_日期函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/03_内置函数_数学函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/04_内置函数_集合函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/05_内置函数_条件函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/06_内置函数_类型转换函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/07_内置函数_数据脱敏函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/内置函数/08_内置函数_其他杂项函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/01_自定义UDF函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/02_UDTF函数-explode函数与侧视图lateral view使用.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/03_Lateral view侧视图.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/04_基础聚合函数UDAF.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/05_增强聚合函数UDAF.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/06_窗口函数_概述.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/07_窗口函数_窗口聚合函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/08_窗口函数_窗口表达式.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/09_窗口函数_窗口排序函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/10_窗口函数_窗口分析函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/用户自定义函数/11_抽样函数.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/运算符/01_环境准备-创建空表dual.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/运算符/02_关系运算符.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/运算符/03_算数运算符.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/04_HIve参数配置与函数、运算符/运算符/04_逻辑运算符.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/01_多字节分隔符处理/01_特殊数据的处理_多字符分隔符+数据字段中存在分隔符.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/01_多字节分隔符处理/02_解决方案一：替换分隔符.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/01_多字节分隔符处理/03_解决方案二：RegexSerDe正则加载.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/01_多字节分隔符处理/04_解决方案三：自定义inputformat.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/02_Hive_URL格式数据解析/01_parse_url获取URL的单列值.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/02_Hive_URL格式数据解析/02_parse_url_tuple获取URL的多列值.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/02_Hive_URL格式数据解析/03_parse_url_tuple+laterview侧视图的使用.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/03_行列转换应用与实现/01_多行转多列使用casewhen.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/03_行列转换应用与实现/02_多行转单列使用concat_ws和collect_list.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/03_行列转换应用与实现/03_多列转多行使用union.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/03_行列转换应用与实现/04_多列转单行使用explode.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/04_json格式数据处理/01_get_json_object获取json串的单列值.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/04_json格式数据处理/02_json_tuple获取json串的多列值.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/04_json格式数据处理/03_JsonSerDe加载数据.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/t_user/xx.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/01SQLcode.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/02选择，投影SQL.sql" dialect="Oracle" />
@@ -33,6 +90,8 @@
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-2PLSQL编程两种变量、if、loop、while、for.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-3函数cursor.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/12-存储过程(函数).sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/13-触发器.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/Oracle高级部分.sql" dialect="OracleSqlPlus" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/实际应用/修改用户信息.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/实际应用/删除用户信息.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/实际应用/增加用户.sql" dialect="Oracle" />

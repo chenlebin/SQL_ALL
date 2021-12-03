@@ -1,5 +1,5 @@
 update T_YHUSA
-set UIDSUM=5
+set UIDSUM=5;
 UPDATE T_YHUSA
 set UIDSUM=(select count("UID") from t_yhuser);
 

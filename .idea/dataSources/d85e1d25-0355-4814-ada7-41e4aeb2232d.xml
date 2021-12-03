@@ -5,6 +5,8 @@
       <ServerVersion>3.1.2</ServerVersion>
     </root>
     <schema id="2" parent="1" name="db_df2">
+      <Properties>createdBy
+chenlebin</Properties>
       <Location>hdfs://mycluster/user/hive/warehouse/db_df2.db</Location>
     </schema>
     <schema id="3" parent="1" name="default">
@@ -1292,13 +1294,58 @@
       <ClassName>org.apache.hadoop.hive.ql.udf.UDFYear</ClassName>
       <AutoCreated>1</AutoCreated>
     </routine>
-    <table id="263" parent="2" name="employee">
+    <table id="263" parent="2" name="apachelog">
       <Temporary>1</Temporary>
     </table>
-    <table id="264" parent="2" name="student">
+    <table id="264" parent="2" name="col2row1">
       <Temporary>1</Temporary>
     </table>
-    <table id="265" parent="2" name="student_trans">
+    <table id="265" parent="2" name="col2row2">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="266" parent="2" name="dual">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="267" parent="2" name="employee">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="268" parent="2" name="employee_address">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="269" parent="2" name="employee_connection">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="270" parent="2" name="nba_team">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="271" parent="2" name="nba_team_tmp">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="272" parent="2" name="row2col1">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="273" parent="2" name="row2col2">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="274" parent="2" name="singer">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="275" parent="2" name="singer_wash">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="276" parent="2" name="student">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="277" parent="2" name="student_hdfs">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="278" parent="2" name="student_hdfs_p">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="279" parent="2" name="student_local">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="280" parent="2" name="student_trans">
       <BucketsNum>2</BucketsNum>
       <RowFormatSerde>org.apache.hadoop.hive.ql.io.orc.OrcSerde</RowFormatSerde>
       <InputFormat>org.apache.hadoop.hive.ql.io.orc.OrcInputFormat</InputFormat>
@@ -1311,81 +1358,106 @@ true
 transactional_properties
 default</Properties>
     </table>
-    <table id="266" parent="2" name="t_usa_covid19">
+    <table id="281" parent="2" name="t_usa_covid19">
+      <RowFormatSerde>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</RowFormatSerde>
+      <InputFormat>org.apache.hadoop.mapred.TextInputFormat</InputFormat>
+      <OutputFormat>org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat</OutputFormat>
+      <Location>hdfs://mycluster/user/hive/warehouse/t_usa_covid19</Location>
       <Temporary>1</Temporary>
     </table>
-    <table id="267" parent="2" name="t_usa_covid19_bucket">
+    <table id="282" parent="2" name="t_usa_covid19_bucket">
       <Temporary>1</Temporary>
     </table>
-    <table id="268" parent="2" name="t_usa_covid19_bucket_sort">
+    <table id="283" parent="2" name="t_usa_covid19_bucket_sort">
       <Temporary>1</Temporary>
     </table>
-    <table id="269" parent="2" name="t_user">
+    <table id="284" parent="2" name="t_usa_covid19_p">
       <Temporary>1</Temporary>
     </table>
-    <table id="270" parent="2" name="t_user_province">
+    <table id="285" parent="2" name="t_user">
       <Temporary>1</Temporary>
     </table>
-    <table id="271" parent="2" name="t_user_province_city">
+    <table id="286" parent="2" name="t_user_province">
       <Temporary>1</Temporary>
     </table>
-    <table id="272" parent="2" name="trans_student">
+    <table id="287" parent="2" name="t_user_province_city">
       <Temporary>1</Temporary>
     </table>
-    <table id="273" parent="2" name="usa">
+    <table id="288" parent="2" name="tab1">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="289" parent="2" name="tb_json_test1">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="290" parent="2" name="tb_json_test2">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="291" parent="2" name="tb_url">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="292" parent="2" name="trans_student">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="293" parent="2" name="usa">
       <Comment>单词统计</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="274" parent="2" name="usa_bucket">
+    <table id="294" parent="2" name="usa_bucket">
       <Comment>州县数据分桶表</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="275" parent="2" name="usa_partition">
+    <table id="295" parent="2" name="usa_partition">
       <Comment>州县数据分区表</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="276" parent="2" name="usa_trans">
+    <table id="296" parent="2" name="usa_trans">
       <Comment>州县数据事务表</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="277" parent="2" name="usa_zong">
+    <table id="297" parent="2" name="usa_zong">
       <Comment>????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="278" parent="2" name="userinfo">
+    <table id="298" parent="2" name="userinfo">
       <Temporary>1</Temporary>
     </table>
-    <table id="279" parent="2" name="wzry">
+    <table id="299" parent="2" name="website_pv_info">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="300" parent="2" name="website_url_info">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="301" parent="2" name="wzry">
       <Comment>次要定位</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="280" parent="2" name="wzry_all_hero">
+    <table id="302" parent="2" name="wzry_all_hero">
       <Comment>???????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="281" parent="2" name="wzry_all_hero_partition">
+    <table id="303" parent="2" name="wzry_all_hero_partition">
       <Comment>???????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="282" parent="2" name="wzry_hero_part">
+    <table id="304" parent="2" name="wzry_hero_part">
       <Comment>???????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="283" parent="2" name="wzry_pifu">
+    <table id="305" parent="2" name="wzry_pifu">
       <Comment>?????????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="284" parent="2" name="wzry_team">
+    <table id="306" parent="2" name="wzry_team">
       <Temporary>1</Temporary>
     </table>
-    <view id="285" parent="2" name="safer_user_info"/>
-    <view id="286" parent="2" name="v_usa_covid19">
+    <view id="307" parent="2" name="safer_user_info"/>
+    <view id="308" parent="2" name="v_usa_covid19">
       <Comment>This is a view</Comment>
     </view>
-    <view id="287" parent="2" name="v_wzry_sheshou"/>
-    <view id="288" parent="2" name="wzry_pifu_view"/>
-    <materialized-view id="289" parent="2" name="student_trans_agg"/>
-    <table id="290" parent="3" name="student_trans">
+    <view id="309" parent="2" name="v_wzry_sheshou"/>
+    <view id="310" parent="2" name="wzry_pifu_view"/>
+    <materialized-view id="311" parent="2" name="student_trans_agg"/>
+    <table id="312" parent="3" name="student_trans">
       <BucketsNum>2</BucketsNum>
       <RowFormatSerde>org.apache.hadoop.hive.ql.io.orc.OrcSerde</RowFormatSerde>
       <InputFormat>org.apache.hadoop.hive.ql.io.orc.OrcInputFormat</InputFormat>
@@ -1398,553 +1470,825 @@ true
 transactional_properties
 default</Properties>
     </table>
-    <column id="291" parent="263" name="firstname">
+    <column id="313" parent="264" name="col1">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="292" parent="263" name="lastname">
+    <column id="314" parent="264" name="col2">
+      <Position>2</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="315" parent="264" name="col3">
+      <Position>3</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="316" parent="264" name="col4">
+      <Position>4</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="317" parent="265" name="col1">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="318" parent="265" name="col2">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="293" parent="263" name="ssn">
+    <column id="319" parent="265" name="col3">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="294" parent="263" name="password">
-      <Position>4</Position>
+    <column id="320" parent="266" name="id">
+      <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="295" parent="263" name="department">
-      <Position>5</Position>
-      <DataType>string|12s</DataType>
-    </column>
-    <column id="296" parent="264" name="num">
+    <column id="321" parent="267" name="id">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="297" parent="264" name="name">
+    <column id="322" parent="267" name="name">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="298" parent="264" name="sex">
+    <column id="323" parent="267" name="deg">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="299" parent="264" name="age">
+    <column id="324" parent="267" name="salary">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="300" parent="264" name="dept">
+    <column id="325" parent="267" name="dept">
       <Position>5</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="301" parent="265" name="sno">
+    <column id="326" parent="268" name="id">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="327" parent="268" name="hno">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="328" parent="268" name="street">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="329" parent="268" name="city">
+      <Position>4</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="330" parent="269" name="id">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="331" parent="269" name="phno">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="332" parent="269" name="email">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="333" parent="270" name="team_name">
+      <Position>1</Position>
+      <Comment>球队名</Comment>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="334" parent="270" name="year">
+      <Position>2</Position>
+      <Comment>获奖年份</Comment>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="335" parent="271" name="team_name">
+      <Position>1</Position>
+      <Comment>球队名</Comment>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="336" parent="271" name="year">
+      <Position>2</Position>
+      <Comment>获奖年份</Comment>
+      <DataType>array&lt;int&gt;|2003s</DataType>
+    </column>
+    <column id="337" parent="272" name="col1">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="338" parent="272" name="col2">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="339" parent="272" name="col3">
+      <Position>3</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="340" parent="273" name="col1">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="341" parent="273" name="col2">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="342" parent="273" name="col3">
+      <Position>3</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="343" parent="275" name="id">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="344" parent="275" name="name">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="345" parent="275" name="country">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="346" parent="275" name="province">
+      <Position>4</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="347" parent="275" name="gender">
+      <Position>5</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="348" parent="275" name="works">
+      <Position>6</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="349" parent="276" name="num">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="350" parent="276" name="name">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="351" parent="276" name="sex">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="352" parent="276" name="age">
+      <Position>4</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="353" parent="276" name="dept">
+      <Position>5</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="354" parent="277" name="num">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="355" parent="277" name="name">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="356" parent="277" name="sex">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="357" parent="277" name="age">
+      <Position>4</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="358" parent="277" name="dept">
+      <Position>5</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="359" parent="278" name="num">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="360" parent="278" name="name">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="361" parent="278" name="sex">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="362" parent="278" name="age">
+      <Position>4</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="363" parent="278" name="dept">
+      <Position>5</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="364" parent="278" name="country">
+      <Position>6</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="365" parent="279" name="num">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="366" parent="279" name="name">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="367" parent="279" name="sex">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="368" parent="279" name="age">
+      <Position>4</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="369" parent="279" name="dept">
+      <Position>5</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="370" parent="280" name="sno">
       <Position>1</Position>
       <Type>clustering</Type>
       <DataType>int|4s</DataType>
     </column>
-    <column id="302" parent="265" name="sname">
+    <column id="371" parent="280" name="sname">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="303" parent="265" name="sdept">
+    <column id="372" parent="280" name="sdept">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="304" parent="266" name="count_date">
+    <column id="373" parent="281" name="count_date">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="305" parent="266" name="county">
+    <column id="374" parent="281" name="county">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="306" parent="266" name="state">
+    <column id="375" parent="281" name="state">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="307" parent="266" name="fips">
+    <column id="376" parent="281" name="fips">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="308" parent="266" name="cases">
+    <column id="377" parent="281" name="cases">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="309" parent="266" name="deaths">
+    <column id="378" parent="281" name="deaths">
       <Position>6</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="310" parent="267" name="count_date">
+    <column id="379" parent="282" name="count_date">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="311" parent="267" name="county">
+    <column id="380" parent="282" name="county">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="312" parent="267" name="state">
+    <column id="381" parent="282" name="state">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="313" parent="267" name="fips">
+    <column id="382" parent="282" name="fips">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="314" parent="267" name="cases">
+    <column id="383" parent="282" name="cases">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="315" parent="267" name="deaths">
+    <column id="384" parent="282" name="deaths">
       <Position>6</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="316" parent="268" name="count_date">
+    <column id="385" parent="283" name="count_date">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="317" parent="268" name="county">
+    <column id="386" parent="283" name="county">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="318" parent="268" name="state">
+    <column id="387" parent="283" name="state">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="319" parent="268" name="fips">
+    <column id="388" parent="283" name="fips">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="320" parent="268" name="cases">
+    <column id="389" parent="283" name="cases">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="321" parent="268" name="deaths">
+    <column id="390" parent="283" name="deaths">
       <Position>6</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="322" parent="269" name="id">
+    <column id="391" parent="284" name="county">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="392" parent="284" name="fips">
+      <Position>2</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="393" parent="284" name="cases">
+      <Position>3</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="394" parent="284" name="deaths">
+      <Position>4</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="395" parent="284" name="count_date">
+      <Position>5</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="396" parent="284" name="state">
+      <Position>6</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="397" parent="285" name="id">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="323" parent="269" name="name">
+    <column id="398" parent="285" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|12s</DataType>
     </column>
-    <column id="324" parent="269" name="age">
+    <column id="399" parent="285" name="age">
       <Position>3</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="325" parent="269" name="zhuzhi">
+    <column id="400" parent="285" name="zhuzhi">
       <Position>4</Position>
       <DataType>varchar(255)|12s</DataType>
     </column>
-    <column id="326" parent="270" name="id">
+    <column id="401" parent="286" name="num">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="327" parent="270" name="name">
+    <column id="402" parent="286" name="name">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="328" parent="270" name="age">
+    <column id="403" parent="286" name="sex">
       <Position>3</Position>
-      <DataType>int|4s</DataType>
+      <DataType>string|12s</DataType>
     </column>
-    <column id="329" parent="270" name="province">
+    <column id="404" parent="286" name="age">
       <Position>4</Position>
-      <DataType>string|12s</DataType>
-    </column>
-    <column id="330" parent="271" name="id">
-      <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="331" parent="271" name="name">
-      <Position>2</Position>
-      <DataType>string|12s</DataType>
-    </column>
-    <column id="332" parent="271" name="age">
-      <Position>3</Position>
-      <DataType>int|4s</DataType>
-    </column>
-    <column id="333" parent="271" name="province">
-      <Position>4</Position>
-      <DataType>string|12s</DataType>
-    </column>
-    <column id="334" parent="271" name="city">
+    <column id="405" parent="286" name="dept">
       <Position>5</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="335" parent="272" name="id">
+    <column id="406" parent="286" name="province">
+      <Position>6</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="407" parent="287" name="id">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="336" parent="272" name="name">
+    <column id="408" parent="287" name="name">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="337" parent="272" name="age">
+    <column id="409" parent="287" name="age">
       <Position>3</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="338" parent="273" name="sate">
+    <column id="410" parent="287" name="province">
+      <Position>4</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="411" parent="287" name="city">
+      <Position>5</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="412" parent="288" name="col1">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="413" parent="288" name="col2">
+      <Position>2</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="414" parent="288" name="col3">
+      <Position>3</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="415" parent="289" name="json">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="416" parent="291" name="id">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="417" parent="291" name="url">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="418" parent="292" name="id">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="419" parent="292" name="name">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="420" parent="292" name="age">
+      <Position>3</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="421" parent="293" name="sate">
       <Position>1</Position>
       <Comment>州</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="339" parent="273" name="county">
+    <column id="422" parent="293" name="county">
       <Position>2</Position>
       <Comment>县</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="340" parent="274" name="sate">
+    <column id="423" parent="294" name="sate">
       <Position>1</Position>
       <Comment>州</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="341" parent="274" name="county">
+    <column id="424" parent="294" name="county">
       <Position>2</Position>
       <Comment>县</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="342" parent="275" name="sate">
+    <column id="425" parent="295" name="sate">
       <Position>1</Position>
       <Comment>州</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="343" parent="275" name="county">
+    <column id="426" parent="295" name="county">
       <Position>2</Position>
       <Comment>县</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="344" parent="275" name="p_sate">
+    <column id="427" parent="295" name="p_sate">
       <Position>3</Position>
       <Comment>分区_州</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="345" parent="276" name="sate">
+    <column id="428" parent="296" name="sate">
       <Position>1</Position>
       <Comment>州</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="346" parent="276" name="county">
+    <column id="429" parent="296" name="county">
       <Position>2</Position>
       <Comment>县</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="347" parent="277" name="usa_date">
+    <column id="430" parent="297" name="usa_date">
       <Position>1</Position>
       <DataType>date|91s</DataType>
     </column>
-    <column id="348" parent="277" name="county">
+    <column id="431" parent="297" name="county">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="349" parent="277" name="state">
+    <column id="432" parent="297" name="state">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="350" parent="277" name="cases">
+    <column id="433" parent="297" name="cases">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="351" parent="277" name="deaths">
+    <column id="434" parent="297" name="deaths">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="352" parent="278" name="firstname">
+    <column id="435" parent="298" name="firstname">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="353" parent="278" name="lastname">
+    <column id="436" parent="298" name="lastname">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="354" parent="278" name="ssn">
+    <column id="437" parent="298" name="ssn">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="355" parent="278" name="password">
+    <column id="438" parent="298" name="password">
       <Position>4</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="356" parent="279" name="id">
+    <column id="439" parent="299" name="cookieid">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="440" parent="299" name="createtime">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="441" parent="299" name="pv">
+      <Position>3</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="442" parent="300" name="cookieid">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="443" parent="300" name="createtime">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="444" parent="300" name="url">
+      <Position>3</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="445" parent="301" name="id">
       <Position>1</Position>
       <Comment>ID</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="357" parent="279" name="name">
+    <column id="446" parent="301" name="name">
       <Position>2</Position>
       <Comment>英雄名称</Comment>
       <DataType>varchar(255)|12s</DataType>
     </column>
-    <column id="358" parent="279" name="hp_max">
+    <column id="447" parent="301" name="hp_max">
       <Position>3</Position>
       <Comment>最大生命值</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="359" parent="279" name="mp_max">
+    <column id="448" parent="301" name="mp_max">
       <Position>4</Position>
       <Comment>最大法力值</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="360" parent="279" name="attack_max">
+    <column id="449" parent="301" name="attack_max">
       <Position>5</Position>
       <Comment>最大攻击</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="361" parent="279" name="defense_max">
+    <column id="450" parent="301" name="defense_max">
       <Position>6</Position>
       <Comment>最大防御</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="362" parent="279" name="role_main">
+    <column id="451" parent="301" name="role_main">
       <Position>7</Position>
       <Comment>主要定位</Comment>
       <DataType>varchar(255)|12s</DataType>
     </column>
-    <column id="363" parent="279" name="role_assist">
+    <column id="452" parent="301" name="role_assist">
       <Position>8</Position>
       <DataType>varchar(255)|12s</DataType>
     </column>
-    <column id="364" parent="280" name="id">
+    <column id="453" parent="302" name="id">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="365" parent="280" name="name">
+    <column id="454" parent="302" name="name">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="366" parent="280" name="hp_max">
+    <column id="455" parent="302" name="hp_max">
       <Position>3</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="367" parent="280" name="mp_max">
+    <column id="456" parent="302" name="mp_max">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="368" parent="280" name="attack_max">
+    <column id="457" parent="302" name="attack_max">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="369" parent="280" name="defense_max">
+    <column id="458" parent="302" name="defense_max">
       <Position>6</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="370" parent="280" name="attack_range">
+    <column id="459" parent="302" name="attack_range">
       <Position>7</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="371" parent="280" name="role_main">
+    <column id="460" parent="302" name="role_main">
       <Position>8</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="372" parent="280" name="role_assist">
+    <column id="461" parent="302" name="role_assist">
       <Position>9</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="373" parent="281" name="id">
+    <column id="462" parent="303" name="id">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="374" parent="281" name="name">
+    <column id="463" parent="303" name="name">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="375" parent="281" name="hp_max">
+    <column id="464" parent="303" name="hp_max">
       <Position>3</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="376" parent="281" name="mp_max">
+    <column id="465" parent="303" name="mp_max">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="377" parent="281" name="attack_max">
+    <column id="466" parent="303" name="attack_max">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="378" parent="281" name="defense_max">
+    <column id="467" parent="303" name="defense_max">
       <Position>6</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="379" parent="281" name="attack_range">
+    <column id="468" parent="303" name="attack_range">
       <Position>7</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="380" parent="281" name="role_main">
+    <column id="469" parent="303" name="role_main">
       <Position>8</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="381" parent="281" name="role_assist">
+    <column id="470" parent="303" name="role_assist">
       <Position>9</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="382" parent="281" name="role">
+    <column id="471" parent="303" name="role">
       <Position>10</Position>
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="383" parent="282" name="id">
+    <column id="472" parent="304" name="id">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="384" parent="282" name="name">
+    <column id="473" parent="304" name="name">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="385" parent="282" name="hp_max">
+    <column id="474" parent="304" name="hp_max">
       <Position>3</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="386" parent="282" name="mp_max">
+    <column id="475" parent="304" name="mp_max">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="387" parent="282" name="attack_max">
+    <column id="476" parent="304" name="attack_max">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="388" parent="282" name="defense_max">
+    <column id="477" parent="304" name="defense_max">
       <Position>6</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="389" parent="282" name="attack_range">
+    <column id="478" parent="304" name="attack_range">
       <Position>7</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="390" parent="282" name="role_main">
+    <column id="479" parent="304" name="role_main">
       <Position>8</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="391" parent="282" name="role_assist">
+    <column id="480" parent="304" name="role_assist">
       <Position>9</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="392" parent="282" name="role">
+    <column id="481" parent="304" name="role">
       <Position>10</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="393" parent="283" name="id">
+    <column id="482" parent="305" name="id">
       <Position>1</Position>
       <Comment>ID</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="394" parent="283" name="name">
+    <column id="483" parent="305" name="name">
       <Position>2</Position>
       <Comment>???</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="395" parent="283" name="win_rate">
+    <column id="484" parent="305" name="win_rate">
       <Position>3</Position>
       <Comment>??</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="396" parent="283" name="skin_price">
+    <column id="485" parent="305" name="skin_price">
       <Position>4</Position>
       <Comment>?????</Comment>
       <DataType>map&lt;string,int&gt;|2000s</DataType>
     </column>
-    <column id="397" parent="284" name="id">
+    <column id="486" parent="306" name="id">
       <Position>1</Position>
       <Comment>ID</Comment>
       <DataType>int|4s</DataType>
     </column>
-    <column id="398" parent="284" name="team_name">
+    <column id="487" parent="306" name="team_name">
       <Position>2</Position>
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="399" parent="284" name="ace_player_name">
+    <column id="488" parent="306" name="ace_player_name">
       <Position>3</Position>
       <Comment>??????</Comment>
       <DataType>string|12s</DataType>
     </column>
-    <column id="400" parent="285" name="firstname">
+    <column id="489" parent="307" name="firstname">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="401" parent="285" name="lastname">
+    <column id="490" parent="307" name="lastname">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="402" parent="286" name="county">
+    <column id="491" parent="308" name="county">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="403" parent="286" name="deaths">
+    <column id="492" parent="308" name="deaths">
       <Position>2</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="404" parent="287" name="id">
+    <column id="493" parent="309" name="id">
       <Position>1</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="405" parent="287" name="name">
+    <column id="494" parent="309" name="name">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="406" parent="287" name="hp_max">
+    <column id="495" parent="309" name="hp_max">
       <Position>3</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="407" parent="287" name="mp_max">
+    <column id="496" parent="309" name="mp_max">
       <Position>4</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="408" parent="287" name="attack_max">
+    <column id="497" parent="309" name="attack_max">
       <Position>5</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="409" parent="287" name="defense_max">
+    <column id="498" parent="309" name="defense_max">
       <Position>6</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="410" parent="287" name="attack_range">
+    <column id="499" parent="309" name="attack_range">
       <Position>7</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="411" parent="287" name="role_main">
+    <column id="500" parent="309" name="role_main">
       <Position>8</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="412" parent="287" name="role_assist">
+    <column id="501" parent="309" name="role_assist">
       <Position>9</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="413" parent="287" name="win_rate">
+    <column id="502" parent="309" name="win_rate">
       <Position>10</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="414" parent="287" name="skin_price">
+    <column id="503" parent="309" name="skin_price">
       <Position>11</Position>
       <DataType>map&lt;string,int&gt;|2000s</DataType>
     </column>
-    <column id="415" parent="288" name="name">
+    <column id="504" parent="310" name="name">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="416" parent="288" name="win_rate">
+    <column id="505" parent="310" name="win_rate">
       <Position>2</Position>
       <DataType>int|4s</DataType>
     </column>
-    <column id="417" parent="289" name="sdept">
+    <column id="506" parent="311" name="sdept">
       <Position>1</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="418" parent="289" name="sdept_cnt">
+    <column id="507" parent="311" name="sdept_cnt">
       <Position>2</Position>
       <DataType>bigint|-5s</DataType>
     </column>
-    <column id="419" parent="290" name="sno">
+    <column id="508" parent="312" name="sno">
       <Position>1</Position>
       <Type>clustering</Type>
       <DataType>int|4s</DataType>
     </column>
-    <column id="420" parent="290" name="sname">
+    <column id="509" parent="312" name="sname">
       <Position>2</Position>
       <DataType>string|12s</DataType>
     </column>
-    <column id="421" parent="290" name="sdept">
+    <column id="510" parent="312" name="sdept">
       <Position>3</Position>
       <DataType>string|12s</DataType>
     </column>

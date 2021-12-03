@@ -374,7 +374,7 @@ begin
 (s);
 end;
 
----out类型参数如何使用
+---todo out类型参数如何使用  可以省去return
 --例3: --使用存储过程来算年薪
 
 --形参： eno为部门编号，yearsal为全年薪资 out:输出类型 number不可以带长度,如number(10)
@@ -429,6 +429,7 @@ select *
 from scott.dept;
 
 ---1-使用传统方式来实现案例需求
+----todo 案例需求：查询出员工姓名，员工所在部门名称。
 select e.ename, d.dname
 from emp e,
      dept d
@@ -452,7 +453,7 @@ select e.ename, fdna(e.deptno)
 from emp e;
 
 
----触发器，就是制定一个规则，在我们做增删改操作的时候，
+---todo 触发器，就是制定一个规则，在我们做增删改操作的时候，
 ----只要满足该规则，自动触发，无需调用。
 ----语句级触发器：不包含有for each row的触发器。
 ----行级触发器：包含有for each row的就是行级触发器。
@@ -465,18 +466,23 @@ create table person
     pname varchar2(50)
 );
 
+
 insert into person
 values (1, 'wang');
 insert into person
 values (2, 'Liu');
 
+
+select *
+from person;
+
 ---语句级触发器
 ----插入一条记录，输出一个新员工入职
 create
-or replace trigger t1
-after
-insert
-on person
+    or replace trigger t1
+    after
+        insert
+    on person
 declare
 
 begin
@@ -502,10 +508,10 @@ update
 declare
 
 begin
-  if
-:old.sal>:new.sal then
-     raise_application_error(-20001, '不能给员工降薪');
-end if;
+    if
+        :old.sal > :new.sal then
+        raise_application_error(-20001, '不能给员工降薪');
+    end if;
 end;
 ----触发t2
 select *

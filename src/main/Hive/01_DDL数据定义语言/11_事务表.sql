@@ -44,7 +44,9 @@ create table trans_student
     id   int,
     name String,
     age  int
-) clustered by (id) into 2 buckets stored as orc TBLPROPERTIES ('transactional' = 'true');
+) clustered by (id) into 2 buckets
+    stored as orc
+    TBLPROPERTIES ('transactional' = 'true');
 --注意 事务表创建几个要素：开启参数、分桶表、存储格式orc、表属性
 
 --3、针对事务表进行insert update delete操作

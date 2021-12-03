@@ -19,3 +19,5 @@ alter table PARTITION_KEYS
 alter table INDEX_PARAMS
     modify column PARAM_VALUE varchar(4000) character set utf8;
 
+
+

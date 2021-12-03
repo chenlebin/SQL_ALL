@@ -49,6 +49,7 @@ group by sdept;
 --注意 这里当执行CREATE MATERIALIZED VIEW，会启动一个MR对物化视图进行构建
 --可以发现当下的数据库中有了一个物化视图
 show tables;
+
 show materialized views;
 --当数据源更新时（删除delete或者修改modify）需要对物化视图进行重构rebuid
 alter materialized view student_trans_agg rebuild;
@@ -71,3 +72,8 @@ explain
 SELECT sdept, count(*) as sdept_cnt
 from student_trans
 group by sdept;
+
+
+show materialized views;
+
+describe formatted db_df2.student_trans_agg

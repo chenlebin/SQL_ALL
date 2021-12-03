@@ -4,20 +4,19 @@ declare
     a int := 100;
     b int := 200;
     c number;
-
-
 begin
     c := (a + b) / (a - b);
     dbms_output.put_line(c);
 
 
 exception
+    --异常处理
     when zero_divide then
         dbms_output.put_line('除数不能为零');
 
 end;
 
-set serveroutput on
+set serveroutput on;
 declare
     age int := 55;
 begin
@@ -65,7 +64,7 @@ select p.*
 from (select rownum r, t.*
       from (select e.* from emp e order by sal desc) t) p
 where r <= 5
-  and r > 0;
+  and r > 2;
 
 
 -- 显示第二页

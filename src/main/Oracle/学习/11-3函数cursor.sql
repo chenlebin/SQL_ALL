@@ -1,6 +1,7 @@
 -----给指定部门员工涨工资
 ---cursor游标：可以存放多个对象，多行记录。
 --输出emp表中所有员工的姓名
+--%type
 declare
     cursor c2(eno emp.deptno%type)
         is select empno

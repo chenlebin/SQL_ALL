@@ -25,7 +25,7 @@ CREATE TABLE db_df2.t_usa_covid19_bucket
 --分桶的字段一定要是表中已经存在的字段
 
 
---根据state州分为5桶 每个桶内根据cases确诊病例数倒序排序
+--根据state州分为5桶 todo 每个桶内根据cases确诊病例数倒序排序
 CREATE TABLE db_df2.t_usa_covid19_bucket_sort
 (
     count_date string,

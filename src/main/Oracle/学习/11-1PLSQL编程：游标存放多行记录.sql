@@ -4,6 +4,8 @@
 -- 可以存放多个对象，多行记录。
 -- 输出emp表中所有员工的姓名
 declare
+    cursor c2 is select *
+                 from DEPT;
     cursor c1 is select *
                  from emp; --定义游标c1 存入所有的emp表中的信息
     emprow emp%rowtype; --创建记录类型(行)变量来存入循环遍历的每行数据

@@ -31,6 +31,6 @@ create or replace function f_yearsal(eno emp.empno%type) return number --第一个r
     s number(10); --指定return后的变量名称 变量类型
 begin
     --comm为奖金， comm=null时为0， nvl():从两个表达式返回一个非 null 值。
-    select sal * 12 + nvl(comm, 0) into s from emp where empno = eno;
+    select (sal * 12 + nvl(comm, 0)) into s from emp where empno = eno;
     return s; --第二个return
 end;

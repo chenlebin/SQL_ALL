@@ -26,7 +26,7 @@ where deptno = 30;
 -- 查询各部门工资
 select *
 from emp
-order by job;
+order by sal desc;
 
 -- 查询平均工资
 select avg(sal)

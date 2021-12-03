@@ -22,7 +22,11 @@ from emp;
 -- 消除结果集中的重复行  distinct
 select job
 from emp;
+
 select distinct job
+from emp;
+
+select count(distinct job)
 from emp;
 
 
