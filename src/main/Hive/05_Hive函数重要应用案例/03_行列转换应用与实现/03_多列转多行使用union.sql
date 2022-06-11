@@ -23,6 +23,7 @@ select *
 from col2row1;
 
 --最终实现
+explain extended
 select col1, 'c' as col2, col2 as col3
 from col2row1
 UNION ALL
@@ -30,4 +31,5 @@ select col1, 'd' as col2, col3 as col3
 from col2row1
 UNION ALL
 select col1, 'e' as col2, col4 as col3
-from col2row1;
+from col2row1
+    sort by col1;

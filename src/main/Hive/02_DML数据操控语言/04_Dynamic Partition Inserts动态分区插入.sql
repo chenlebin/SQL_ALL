@@ -56,7 +56,12 @@ create table student_partition
     Sage  int
 ) partitioned by (Sdept string);
 
+desc formatted student_partition;
+
+desc formatted student_trans;
+
 --4、执行动态分区插入操作
+explain extended
 insert into table student_partition partition (Sdept)
 select num, name, sex, age, dept
 from student;

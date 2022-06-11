@@ -16,7 +16,7 @@ select rand();
 select rand(3);
 
 
---二进制函数:  bin(BIGINT a)
+--转换为二进制函数:  bin(BIGINT a)
 select bin(18);
 --进制转换函数: conv(BIGINT num, int from_base, int to_base)
 --要转换的参数，原来的类型，转换之后的类型

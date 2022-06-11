@@ -34,6 +34,7 @@ limit 2;
 
 --2、显示当前已有的视图
 show tables;
+
 show views;
 --hive v2.2.0之后支持
 

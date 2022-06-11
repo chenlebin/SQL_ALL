@@ -30,8 +30,10 @@ select *
 from db_df2.wzry_hero_part;
 
 //查询主要定位role_main为射手archer，并且最大生命大于6000的信息
-select count(*)
-from db_df2.wzry_hero_part
+
+explain extended
+select *
+from db_df2.wzry_all_hero
 where role_main = 'archer'
   and hp_max > 6000;
 
@@ -60,7 +62,7 @@ from db_df2.wzry_hero_part;
 
 /*todo 分区表数据加载--静态分区*/
 //静态分区指的是分区的属性值是由用户在加载数据的时候手动指定的
-// todo 语法规则：
+// todo 语法规则：(Hive 的load data对于local inpath的文件是复制，对于inpath的文件是直接剪切)
 // load data [local] inpath '文件路径' into table 表名 partition (分区字段='分区值'.....);
 
 load data inpath '/hivedata/wzry_hero/archer.txt' into table db_df2.wzry_hero_part partition (role = 'archer');
@@ -77,6 +79,9 @@ from db_df2.wzry_hero_part;
 
 //查询主要定位role_main为射手archer，并且最大生命大于6000的信息
 -- todo 这里查询的就不是全表查询了而是分区查询，查询分区字段role等于'archer'中的数据文件，提高了查询效率
+desc formatted db_df2.wzry_hero_part;
+
+
 select *
 from db_df2.wzry_hero_part
 where role = 'archer'

@@ -14,4 +14,5 @@ select array_contains(`array`(11, 22, 33), 11);
 select array_contains(`array`(11, 22, 33), 66);
 
 --数组排序函数:sort_array(Array<T>)
-select sort_array(`array`(12, 2, 32));
+select sort_array(`array`(12, 10, 22));
+select sort_array(`array`('b', 'a', 'aa', 'bc'));

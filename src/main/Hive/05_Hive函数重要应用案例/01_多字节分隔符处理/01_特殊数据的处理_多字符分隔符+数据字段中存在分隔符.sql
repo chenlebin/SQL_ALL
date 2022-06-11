@@ -1,6 +1,6 @@
 --------------------------------多字节分隔符----------------------------------------------------
 
---针对双字节分隔符 采用默认的SerDe来处理
+--针对多字节分隔符 采用默认的SerDe来处理
 -- 01||周杰伦||中国||台湾||男||七里香
 drop table db_df2.singer;
 create table singer
@@ -44,6 +44,7 @@ from apachelog;
 
 ------------------------
 --清洗完数据之后  使用|分隔符
+drop table singer_wash;
 create table singer_wash
 (
     id       string,

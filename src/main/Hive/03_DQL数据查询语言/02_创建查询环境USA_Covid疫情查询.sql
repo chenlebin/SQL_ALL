@@ -4,6 +4,12 @@ drop table db_df2.t_usa_covid19_p;
 use db_df2;
 show tables;
 
+select *
+from t_usa_covid19_p;
+
+show create table t_usa_covid19_p;
+
+desc formatted t_usa_covid19;
 
 CREATE TABLE t_usa_covid19
 (
@@ -32,12 +38,15 @@ CREATE TABLE if not exists t_usa_covid19_p
     partitioned by (count_date string,state string)
     row format delimited fields terminated by ",";
 
---step3:使用动态分区插入将数据导入t_usa_covid19_p中
+--step3:使用(非严格)动态分区插入将数据导入t_usa_covid19_p中
 set hive.exec.dynamic.partition.mode = nonstrict;
 
 insert into table t_usa_covid19_p partition (count_date, state)
 select county, fips, cases, deaths, count_date, state
 from t_usa_covid19;
 
+explain extended
 select *
-from t_usa_covid19_p;
+from t_usa_covid19_p
+    distribute by state
+    sort by deaths desc;

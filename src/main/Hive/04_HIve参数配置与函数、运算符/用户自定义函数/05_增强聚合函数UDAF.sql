@@ -34,7 +34,7 @@ ORDER BY GROUPING__ID;
 --根据grouping sets中的分组条件month，day，1是代表month，2是代表day
 
 --等价于
-SELECT month, NULL, COUNT(DISTINCT cookieid) AS nums, 1 AS GROUPING__ID
+SELECT month, NULL as day, COUNT(DISTINCT cookieid) AS nums, 1 AS GROUPING__ID
 FROM cookie_info
 GROUP BY month
 UNION ALL

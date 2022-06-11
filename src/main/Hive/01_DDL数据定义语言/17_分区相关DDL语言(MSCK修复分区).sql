@@ -14,10 +14,14 @@ create table if not exists t_user_province
         fields terminated by ',';
 use db_df2;
 
+select *
+from t_user_province;
+
 load data local inpath '/root/hivedata/students.txt' into table t_user_province partition (province = "SH");
 
 select *
 from db_df2.t_user_province;
+
 --step2：添加一个分区
 alter table t_user_province
     drop if exists partition (province = "BJ");

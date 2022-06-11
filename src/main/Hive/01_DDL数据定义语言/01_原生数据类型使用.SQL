@@ -23,9 +23,11 @@ create table db_df2.wzry
     attack_max  int comment "最大攻击",
     defense_max int comment "最大防御",
     role_main   varchar(255) comment "主要定位",
-    role_assist varchar(255)
-) comment "次要定位"
+    role_assist varchar(255) comment "次要定位"
+)
     row format delimited fields terminated by '\t';
+
+-- hadoop fs -put archer.txt  /user/hive/warehouse/db_df2.db/t_archer
 
 select *
 from db_df2.wzry;

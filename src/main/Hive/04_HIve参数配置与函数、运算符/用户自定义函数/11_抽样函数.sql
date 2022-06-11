@@ -31,7 +31,7 @@ LIMIT 2;
 
 
 ---block抽样
---根据行数抽样
+--根据 行数 抽样(速度快但是不随机)
 SELECT *
 FROM student TABLESAMPLE (1 ROWS);
 
@@ -44,11 +44,15 @@ FROM student TABLESAMPLE (50 PERCENT);
 SELECT *
 FROM student TABLESAMPLE (1k);
 
+show create table t_usa_covid19_bucket;
 
 ---bucket table抽样
 --根据整行数据进行抽样
 SELECT *
 FROM t_usa_covid19_bucket TABLESAMPLE (BUCKET 1 OUT OF 5 ON rand());
+
+
+show create table t_usa_covid19_bucket;
 
 --根据分桶字段进行抽样 效率更高
 describe formatted t_usa_covid19_bucket;

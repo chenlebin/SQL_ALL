@@ -23,13 +23,18 @@ create table if not exists usa_bucket
     comment "州县数据分桶表"
     clustered by (sate) into 2 buckets
     row format delimited
-        fields terminated by ",";
+        fields terminated by ","
+    stored as orc tblproperties
+    ("orc.create.index" = "true","orc.bloom.filter.columns" = "stime,userid")
+;
 
 drop table if exists usa_bucket;
 
 insert into usa_bucket
 select *
-from usa;
+from usa
+    distribute by sate
+    sort by sate;
 
 --比较正常表和分通表之间的查询速度
 select *
@@ -65,7 +70,7 @@ from usa_partition
 where p_sate = "Alabama";
 
 
-explain
+explain extended
 select *
 from usa_partition
 where p_sate = "Alabama";
@@ -87,7 +92,14 @@ describe formatted usa_bucket;
 describe formatted usa_partition;
 
 
--- 创建事务表
+show create table usa;
+
+show create table usa_bucket;
+
+show create table usa_partition;
+
+-- 创建事务表并使用行式索引和bloom索引
+drop table if exists usa_trans;
 create table usa_trans
 (
     sate   string comment "州",
@@ -98,18 +110,36 @@ create table usa_trans
     row format delimited
         fields terminated by ","
     stored as orc
-    tblproperties ('transactional' = 'true');
+    tblproperties (
+        'transactional' = 'true',
+        "orc.create.index" = "true",
+        "orc.bloom.filter.columns" = "stime,userid");
 -- 插入数据
 insert into usa_trans
 select *
-from usa_bucket;
+from usa_bucket
+    distribute by county
+    sort by county;
+
+desc formatted usa_trans;
+
+
+insert into usa_trans
+values ('xxx', 'sb');
 
 select *
 from usa_trans;
 
+
+explain extended
 update usa_trans
 set sate = "xxx"
-where county = 'Clarke'
+where county = 'Clarke';
+
+explain extended
+select *
+from usa_trans
+where sate = 'xxx';
 
 
 

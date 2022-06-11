@@ -1,5 +1,15 @@
 use db_df2;
 
+--Hive中事务表的创建使用
+--1、开启事务配置（可以使用set设置当前session生效 也可以配置在hive-site.xml中）
+set hive.support.concurrency = true; --Hive是否支持并发
+set hive.enforce.bucketing = true; --从Hive2.0开始不再需要  是否开启分桶功能
+set hive.exec.dynamic.partition.mode = nonstrict; --动态分区模式  非严格
+set hive.txn.manager = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager; --
+set hive.compactor.initiator.on = true; --是否在Metastore实例上运行启动线程和清理线程
+set hive.compactor.worker.threads = 1; --在此metastore实例上运行多少个压缩程序工作线程。
+
+
 show tables;
 
 /* 事务表注意事项：
@@ -60,6 +70,13 @@ where id = 1;
 delete
 from trans_student
 where id = 1;
+
+select *
+from trans_student;
+
+select *
+from trans_student;
+
 
 select *
 from trans_student;

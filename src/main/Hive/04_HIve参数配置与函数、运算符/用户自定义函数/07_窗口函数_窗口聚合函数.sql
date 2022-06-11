@@ -33,18 +33,22 @@ from website_url_info;
 -----窗口聚合函数的使用-----------
 --1、求出每个用户总pv数  sum+group by普通常规聚合操作
 -- 常规聚合操作不可避免的需要使用group by进行分组，组内聚合，但是使用group by之后的查询字段是有限制的
--- todo group by 查询中，查询字段只能是分组字段或者聚合字段
+-- todo group by 查询中，查询字段只能是分组字段或者聚合函数中的字段
 
 select cookieid, sum(pv) as total_pv
 from website_pv_info
 group by cookieid
 order by cookieid, total_pv;
 
+select cookieid, createtime, sum(pv) over (partition by cookieid order by cookieid)
+from website_pv_info;
+
+
 --2、sum+窗口函数 窗口聚合函数 总共有四种用法 注意是整体聚合 还是累积聚合
 --sum(...) over( )对表所有行整体求和
---sum(...) over( order by ... ) 连续累积求和
---sum(...) over( partition by... ) 同组内所有行整体求和
---sum(...) over( partition by... order by ... ) 在每个分组内，连续累积求和
+--sum(...) over( order by ... ) 对表所有行连续累积求和，并进行排序
+--sum(...) over( partition by... ) 分组内所有行整体求和
+--sum(...) over( partition by... order by ... ) 在每个分组内，连续累积求和，并进行排序
 
 --需求：求出网站总的pv数 所有用户所有访问加起来
 --sum(...) over( )对表所有行求和

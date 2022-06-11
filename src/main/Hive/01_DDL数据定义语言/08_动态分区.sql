@@ -2,7 +2,7 @@
 --开启动态分区功能
 set hive.exec.dynamic.partition=true;
 --指定动态分区模式为<nonstrick>非严格模式和<strick>严格模式
---严格模式要求至少有一个分区为静态分区
+--严格模式要求至少有一个分区为静态分区(手动指定)
 set hive.exec.dynamic.partition.mode=nonstrict;
 
 drop table db_df2.wzry_all_hero_partition;
@@ -36,6 +36,7 @@ from wzry_all_hero tmp;
 select *
 from wzry_all_hero_partition;
 
+explain extended
 select *
 from db_df2.wzry_all_hero_partition
 where role = 'warrior'

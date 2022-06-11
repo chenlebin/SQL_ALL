@@ -11,14 +11,19 @@
   */
 
 show tables;
+
 show databases;
+
 use db_df2;
+
 show materialized views;
+
 show views;
+
 -- todo 1：create database 创建数据库
 create database if not exists first_2
     comment "第一个实验数据库"
-    location "/nixx"
+    --location "/nixx"
     with DBPROPERTIES ("createdBy" = "陈乐斌");
 
 show databases;
@@ -75,7 +80,7 @@ alter database db_df2 set DBPROPERTIES ("createdBy" = "chenlebin");
 alter database db_df2 set owner user root;
 
 -- 更改数据库位置
-alter database first_2 set location "hdfs://mycluster/first2";
+alter database first_2 set location "hdfs://mycluster/nixx";
 
 --查看修改之后的数据库信息：
 desc database extended first_2;
@@ -85,6 +90,12 @@ desc formatted db_df2.wzry_pifu;
 show create table db_df2.wzry_pifu;
 
 show tables from db_df2;
+
+desc extended student_trans_agg;
+
+show tables;
+
+desc formatted student_trans_agg;
 
 
 

@@ -15,14 +15,18 @@ load data local inpath '/root/hivedata/url.txt' into table tb_url;
 select *
 from tb_url;
 
-select parse_url_tuple(url, "HOST", "PATH") as (host, path)
-from tb_url;
+select id, par.host, par.path
+from tb_url tb lateral view parse_url_tuple(url, "HOST", "PATH") par as host, path;
 
 select parse_url_tuple(url, "PROTOCOL", "HOST", "PATH") as (protocol, host, path)
 from tb_url;
 
 select parse_url_tuple(url, "HOST", "PATH", "QUERY") as (host, path, query)
 from tb_url;
+
+select id, b.host, b.query
+from tb_url a
+         lateral view parse_url_tuple(url, "HOST", "QUERY", "PROTOCOL") b as host, query, protocol;
 
 
 --parse_url_tuple
@@ -34,5 +38,5 @@ select id,
 from tb_url;
 
 -- 使用侧视图later view
-select id, host, path, query
+select id, url, host, path, query
 from tb_url tb lateral view parse_url_tuple(tb.url, "HOST", "PATH", "QUERY") parse as host, path, query;

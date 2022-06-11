@@ -23,13 +23,15 @@ create table db_df2.wzry_all_hero
     role_main    string,
     role_assist  string
 ) comment '王者荣耀全英雄'
-    clustered by (id) into 3 buckets
+    clustered by (id) --sorted by (id desc )
+        into 3 buckets
     row format delimited
         fields terminated by '\t';
 
 
 alter table wzry_all_hero
     clustered by (id) into 3 buckets;
+
 
 select *
 from wzry_all_hero;

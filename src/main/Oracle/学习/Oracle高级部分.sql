@@ -76,13 +76,13 @@ select *
 from (select rownum r, e.*
       from (select * from emp order by sal desc) e) e1
 where r > 0
-  and r <= 3
+  and r <= 3;
 
 --1.查询员工表，将员工工资进行降序查询，并进行分页取出第一页，一页三条记录
 select *
 from (select rownum r, e.* from (select * from emp order by sal desc) e) e1
 where r > 0
-  and r <= 3
+  and r <= 3;
 /*
 分页公式
 pageNo = 1
@@ -92,7 +92,8 @@ select * from (select rownum r,e.* from (select * from 表名 order by 列名 desc)e
 where r > (pageNo - 1)*pageSize and r <= pageNo*pageSize
 */
 
-    二. oracle编程 pl/sql develope 面向过程语言
+二. oracle编程 pl/
+sql develope 面向过程语言
 
 --定义number变量, 定义PI常量, 定义字符变量pjob
 declare

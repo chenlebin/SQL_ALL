@@ -1,7 +1,7 @@
 ---------------Hive SQL select查询基础语法------------------
 /*
 todo 执行顺序
-from->where->group>having>order>select>limit
+ from->where->group>having>order>select>limit>distinct
 
 
 */
@@ -10,21 +10,27 @@ use db_df2;
 --查询所有字段或者指定字段
 select *
 from t_usa_covid19_p;
+
+explain extended
 select county, cases, deaths
-from t_usa_covid19_p;
+from t_usa_covid19_p
+where count_date = '2021-01-28';
 --查询匹配正则表达式的所有字段
 SET hive.support.quoted.identifiers = none; --反引号不在解释为其他含义，被解释为正则表达式
 select `^c.*`
 from t_usa_covid19_p;
+
 --查询当前数据库
 select current_database();
+
+
 --省去from关键字
 --查询使用函数
-select count(county)
-from t_usa_covid19_p;
+select count(*)
+from (select distinct state from t_usa_covid19_p) a;
 
 
---todo 2、ALL DISTINCT
+--todo 2、ALL/DISTINCT
 --去重时也是执行MapReduce程序所以执行的很慢
 --返回所有匹配的行
 select state
@@ -38,16 +44,21 @@ from t_usa_covid19_p;
 --多个字段distinct 整体去重
 select county, state
 from t_usa_covid19_p;
+
 select distinct county, state
 from t_usa_covid19_p;
+
 select distinct sex
 from student;
 
 --todo 3、WHERE CAUSE
 --条件查询
+explain extended
 select *
 from t_usa_covid19_p
 where 1 > 2; -- 1 > 2 返回false
+
+
 select *
 from t_usa_covid19_p
 where 1 = 1;
@@ -56,6 +67,7 @@ where 1 = 1;
 select *
 from t_usa_covid19_p
 where length(state) > 10;
+
 --where子句支持子查询
 SELECT *
 FROM A
@@ -71,18 +83,21 @@ where count(deaths) > 100
 group by state;
 
 --可以使用Having实现
-select state, count(deaths)
+explain
+select state, count(deaths) as x
 from t_usa_covid19_p
 group by state
-having count(deaths) > 100;
+having x > 100;
 
 
 --todo 4、分区查询、分区裁剪
---找出来自加州，累计死亡人数大于1000的县 state字段就是分区字段 进行分区裁剪 避免全表扫描
+--找出来自加州，累计确诊人数大于1000的县 state字段就是分区字段 进行分区裁剪 避免全表扫描
+explain extended
 select *
 from t_usa_covid19_p
 where state = "California"
-  and deaths > 1000;
+  and cases > 1000;
+
 --多分区裁剪
 select *
 from t_usa_covid19_p
@@ -96,7 +111,7 @@ where count_date = "2021-01-28"
 --根据state州进行分组
 --SemanticException:Expression not in GROUP BY key 'deaths'
 --deaths不是分组字段 报错
---todo 使用group by select_expr要么是分组字段要么是聚合函数中的字段
+--todo 使用group by ,select_expr要么是 分组字段 要么是 聚合函数中的字段
 --state是分组字段 可以直接出现在select_expr中
 select state, deaths
 from t_usa_covid19_p
@@ -105,7 +120,7 @@ group by state;
 --todo 错误
 
 --被聚合函数应用
-select state, sum(deaths)
+select state, sum(deaths), deaths
 from t_usa_covid19_p
 where count_date = "2021-01-28"
 group by state;
@@ -113,9 +128,10 @@ group by state;
 
 
 --todo 6、having
---having主要用于弥补where中不能使用聚合函数的缺陷
+-- having主要用于弥补where中不能使用聚合函数的缺陷
 --统计死亡病例数大于10000的州
 --where语句中不能使用聚合函数 语法报错
+explain extended
 select state, sum(deaths)
 from t_usa_covid19_p
 where count_date = "2021-01-28"
@@ -139,6 +155,9 @@ having cnts > 10000;
 
 
 --todo 7、limit
+--todo limit n 一个参数时直接返回从第一行开始（包含第一行）的n-1行数据
+--todo limit n,m两个参数时返回从n+1行开始（包含n+1行）之后的m-1行数据
+--todo 其实也就是第二个参数是行数！！
 --没有限制返回2021.1.28 加州的所有记录
 select *
 from t_usa_covid19_p
@@ -151,12 +170,13 @@ select *
 from t_usa_covid19_p
 where count_date = "2021-01-28"
   and state = "California"
-limit 5;
+limit 5,1;
 
 --返回结果集从第3行开始 共3行
 --todo 两个参数
+explain extended
 select *
 from t_usa_covid19_p
 where count_date = "2021-01-28"
   and state = "California"
-limit 2,3; --注意 第一个参数偏移量是从0开始的0,1,2所以是从第三行到第五行
+limit 2,5; --注意 第一个参数偏移量是从0开始的0,1,2所以是从第三行到第七行

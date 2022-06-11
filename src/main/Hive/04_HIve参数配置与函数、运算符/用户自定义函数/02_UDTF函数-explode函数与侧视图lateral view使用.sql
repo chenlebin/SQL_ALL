@@ -16,7 +16,7 @@ create table if not exists NBA_team
 create table if not exists NBA_team_tmp
 (
     team_name string comment "球队名",
-    year      array<int> comment "获奖年份"
+    year      array<int> comment "获奖年份集合"
 )
     row format delimited
         fields terminated by ","
@@ -32,6 +32,11 @@ from NBA_team_tmp;
 select explode(year)
 from NBA_team_tmp;
 
+
+select a.team_name, b.year
+from NBA_team_tmp a lateral view explode(year) b as year
+order by year;
+
 --多表查询竟然也不行离谱！！！
 select tmp2.team_name, explode(tmp1.year)
 from NBA_team_tmp as tmp1
@@ -39,6 +44,6 @@ from NBA_team_tmp as tmp1
 
 
 --todo 使用侧视图lateral view解决(类似join连接)
-select a.team_name, b.year
+select team_name, b.year
 from NBA_team_tmp a lateral view explode(a.year) b as year
 order by b.year;

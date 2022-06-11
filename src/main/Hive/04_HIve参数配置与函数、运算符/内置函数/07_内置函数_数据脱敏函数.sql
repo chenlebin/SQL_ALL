@@ -1,8 +1,8 @@
 ----Data Masking Functions 数据脱敏函数------------
 --todo 掩码处理
 --mask
---将查询回的数据，大写字母转换为X，小写字母转换为x，数字转换为n。
-select mask("abc123DEF");--xxxnnnXXX
+--将查询回的数据，大写字母转换为X，小写字母转换为x，数字转换为n，其他字符保持不变。
+select mask("ab-c123DEF");--xxxnnnXXX
 select mask("abc123DEF", '-', '.', '^');
 --自定义替换的字母
 
@@ -16,7 +16,7 @@ select mask_last_n("abc123DEF", 4);
 
 --mask_show_first_n(string str[, int n])
 --除了前n个字符，其余进行掩码处理
-select mask_show_first_n("abc123DEF", 4);
+select mask_show_first_n("abc123DEF", 4, '1', '+', '9');
 
 --除了后n个字符，其余进行掩码处理
 --mask_show_last_n(string str[, int n])

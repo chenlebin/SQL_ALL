@@ -1,5 +1,6 @@
 ------------------
 --todo 使用正则Regex来解析数据
+--todo 注意正则表达式中每一个字段需要使用()括号括起来
 
 --如果表已存在就删除表
 drop table if exists singer;
@@ -11,8 +12,8 @@ create table singer
     country  string,--国家
     province string,--省份
     gender   string,--性别
-    works    string
-) --作品
+    works    string --作品
+)
 --指定使用RegexSerde加载数据
     ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
         WITH SERDEPROPERTIES ("input.regex" = "([0-9]*)\\|\\|(.*)\\|\\|(.*)\\|\\|(.*)\\|\\|(.*)\\|\\|(.*)");

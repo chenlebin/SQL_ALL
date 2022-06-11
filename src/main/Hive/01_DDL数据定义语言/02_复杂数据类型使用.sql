@@ -1,7 +1,7 @@
 use db_df2;
 
 
-drop table db_df2.wzry_pifu;
+drop table if exists db_df2.wzry_pifu;
 /*
 字段:id、name(英雄名称)、win_rate（胜率)、skin_price（皮肤及价格）;
 分析一下:前3个字段原生数据类型、最后一个字段复杂类型map。

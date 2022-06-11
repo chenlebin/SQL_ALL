@@ -59,10 +59,15 @@ from student_trans_agg;
 
 --4、对原始表student_trans查询
 --由于会命中物化视图，重写query查询物化视图，查询速度会加快（没有启动MR，只是普通的table scan）
+explain extended
 SELECT sdept, count(*) as sdept_cnt
 from student_trans
 group by sdept;
+
+
 -- 关闭查询重写功能
+alter materialized view db_df2.student_trans_agg DISABLE rewrite;
+-- 开启查询重写功能
 alter materialized view db_df2.student_trans_agg enable rewrite;
 
 

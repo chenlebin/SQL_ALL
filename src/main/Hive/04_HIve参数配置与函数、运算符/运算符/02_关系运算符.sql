@@ -18,9 +18,11 @@ where 'itcast' like 'it_';--false
 select 1
 from dual
 where 'itcast' like 'it%';--true
+
 select 1
 from dual
 where 'itcast' not like 'hadoo_';--true
+
 select 1
 from dual
 where not 'itcast' like 'hadoo_';

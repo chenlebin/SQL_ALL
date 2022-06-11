@@ -39,5 +39,6 @@ from employee
 group by dept;
 
 ----sum+窗口函数聚合操作------------
+--使用窗口聚合函数不仅可以查询出聚合字段和分组字段，还能查询表的其他字段
 select id, name, deg, salary, dept, sum(salary) over (partition by dept) as total
 from employee;

@@ -19,10 +19,10 @@ $HIVE_HOME/bin/hive -f s3://mys3bucket/s3-script.sql
 $HIVE_HOME/bin/hive -i /home/my/hive-init.sql
 
 -- 使用静默模式将数据从查询中转储到文件中
-$HIVE_HOME/bin/hive -S -e 'select * from db_df2.student' > a.txt
+$HIVE_HOME/bin/hive -S -e 'select * from db_df2.student limit 10' > a.txt
 
 #----------启动服务-------------------
---todo --hiveconf
+--todo --hiveconf(会话级)
 --设置hive的参数
 $HIVE_HOME/bin/hive --hiveconf hive.root.logger=DEBUG,console
 
@@ -53,9 +53,11 @@ hive.exec.dynamic.partition.mode=nonstrict;
 
 
 
+
 --todo 登录beeline客户端：
-$HIVE_HOME
+HIVE_HOME
 /bin/beeline
+$HIVE
 --输入连接hiveserver2的命令：
 ! connect jdbc:hive2://node01:/10000
 --输入登入的用户名：

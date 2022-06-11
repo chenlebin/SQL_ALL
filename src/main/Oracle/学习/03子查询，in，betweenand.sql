@@ -44,14 +44,5 @@ select *
 from emp
 where sal between 2000 and 3000;
 
-/* 查询表里没有奖金的员工信息*/
-select *
-from emp
-where comm is null;
-
-/* 查询表里有奖金的员工信息*/
-select *
-from emp
-where comm is not null;
 
 

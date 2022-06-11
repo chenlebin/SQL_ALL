@@ -16,13 +16,20 @@ CREATE TABLE emp
     name   string,
     salary int
 )
-    STORED AS ORC TBLPROPERTIES ('transactional' = 'true');
+    STORED AS ORC
+    TBLPROPERTIES ('transactional' = 'true');
 
 --事务表 insert  -->delta文件
+explain extended
 INSERT INTO emp
 VALUES (1, 'Jerry', 5000),
        (2, 'Tom', 8000),
        (3, 'Kate', 6000);
+
+explain extended
+update emp
+set salary=7000
+where id = 1;
 
 select *
 from emp;
@@ -40,6 +47,8 @@ where id = 2;
 Show Compactions;
 
 
+select *
+from emp;
 --2、创建Hive事务表
 create table if not exists trans_student
 (
@@ -76,6 +85,15 @@ show tables;
 select *
 from student_local;
 
+select count(*)
+from student_local
+where sex = '女';
+
+
 update student_local
 set age= 35
 where num = 95001;
+
+show create table student_local;
+
+desc formatted student_local;

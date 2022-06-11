@@ -48,5 +48,3 @@ FROM website_url_info;
 
 
 
-
-

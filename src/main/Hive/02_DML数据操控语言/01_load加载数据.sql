@@ -2,11 +2,11 @@ show databases;
 
 ------load语法规则----
 LOAD DATA [LOCAL] INPATH 'filepath' [OVERWRITE] INTO TABLE tablename
-    [PARTITION (partcol1=val1, partcol2=val2...)]
+    [PARTITION (partcol1=val1, partcol2=val2...)];
 -- hive3.0新特性指定输入类型和序列化/反序列化方法
 LOAD DATA [LOCAL] INPATH 'filepath' [OVERWRITE] INTO TABLE tablename
     [PARTITION (partcol1=val1, partcol2=val2...)]
-    [INPUTFORMAT 'inputformat' SERDE 'serde'] (3.0 or later)
+    [INPUTFORMAT 'inputformat' SERDE 'serde'] (3.0 or later);
 
 
 --------练习:Load Data From Local FS or HDFS---------
@@ -49,7 +49,7 @@ LOAD DATA LOCAL INPATH '/root/hivedata/students.txt' INTO TABLE student_local;
 --先把数据上传到HDFS上  hadoop fs -put /root/hivedata/students.txt /
 LOAD DATA INPATH '/students.txt' INTO TABLE student_HDFS;
 
-----从HDFS加载数据到分区表中并制定分区  数据位于HDFS文件系统根目录下
+----从HDFS加载数据到分区表中并制定分区  数据位于HDFS文件系统根目录下 todo 注意这样设定的分区是静态分区
 --先把数据上传到HDFS上 hadoop fs -put /root/hivedata/students.txt /
 LOAD DATA INPATH '/students.txt' INTO TABLE student_HDFS_p partition (country = "China");
 

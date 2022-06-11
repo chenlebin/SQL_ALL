@@ -77,6 +77,7 @@ from t_usa_covid19_bucket;
 --不再需要进行全表扫描过滤
 --根据分桶的规则hash_function(New York) mod 5计算出分桶编号
 --查询指定分桶里面的数据 就可以找出结果  此时是分桶扫描而不是全表扫描
+explain extended
 select *
 from t_usa_covid19_bucket
 where state = "New York";

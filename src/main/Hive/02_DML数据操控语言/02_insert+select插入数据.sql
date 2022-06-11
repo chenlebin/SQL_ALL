@@ -10,6 +10,13 @@ create table t_test_insert
     age  int
 );
 
+desc formatted t_test_insert;
+
+insert into table t_test_insert
+values (1, "allen", 18),
+       (2, "sb", 22);
+
+explain extended
 insert into table t_test_insert
 values (1, "allen", 18),
        (2, "sb", 22);
@@ -17,7 +24,7 @@ values (1, "allen", 18),
 select *
 from t_test_insert;
 
-----------hive中insert+select-----------------
+----------hive中insert+select OVERWRITE|INTO-----------------
 --语法规则
 --覆盖重写
 INSERT OVERWRITE TABLE tablename1 [PARTITION (partcol1=val1, partcol2=val2...) [IF NOT EXISTS]] select_statement1
@@ -54,6 +61,9 @@ create table student_from_insert
 --使用insert+select插入数据到新表中
 insert into table student_from_insert
 select num, name
+from student;
+
+select *
 from student;
 
 select *

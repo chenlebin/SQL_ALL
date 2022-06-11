@@ -1,5 +1,6 @@
 --todo JsonSerDe
 -- 包路径： org.apache.hive.hcatalog.data.JsonSerDe
+--直接将JSON字符串解析成字段
 --创建表
 create table tb_json_test2
 (

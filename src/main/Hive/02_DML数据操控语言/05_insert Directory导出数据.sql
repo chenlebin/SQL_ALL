@@ -17,13 +17,18 @@ select *
 from student;
 
 --1、导出查询结果到HDFS指定目录下
-insert overwrite directory '/tmp/hive_export/e1'
+explain extended
+insert overwrite directory '/tmp/hive_output/e1'
+    row format delimited
+    fields terminated by '  '
+    stored as orc
 select num, name, age
 from student
 limit 2;
 
 --2、导出时指定分隔符和文件存储格式
-insert overwrite directory '/tmp/hive_export/e2' row format delimited fields terminated by ','
+insert overwrite directory '/tmp/hive_export/e2'
+    row format delimited fields terminated by ','
     stored as orc
 select *
 from student;

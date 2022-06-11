@@ -3,6 +3,8 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/Hive/00_练习/00_分区分桶事务表练习.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/00_练习/01_Count.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/00_练习/02_验证时间存成string之后计算两个时间相差多少.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/00_练习/03_复习.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/00_Hive中文乱码.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/00_Hive自带查询语法.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/01_原生数据类型使用.SQL" dialect="HiveQL" />
@@ -21,7 +23,7 @@
     <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/14_物化视图查询重写.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/15_数据库相关DDL语言.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/16_表相关DDL语言.sql" dialect="HiveQL" />
-    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/17_分区相关DDL语言.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/17_分区相关DDL语言(MSCK修复分区).sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/01_DDL数据定义语言/18_show相关查看语句.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/01_load加载数据.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/02_DML数据操控语言/02_insert+select插入数据.sql" dialect="HiveQL" />
@@ -77,6 +79,74 @@
     <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/04_json格式数据处理/01_get_json_object获取json串的单列值.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/04_json格式数据处理/02_json_tuple获取json串的多列值.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/04_json格式数据处理/03_JsonSerDe加载数据.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/05_窗口函数_应用实例/01_案例1：连续登陆用户.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/05_窗口函数_应用实例/02_案例2：级联累加求和.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/05_窗口函数_应用实例/03_案例3：分组TopN.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/05_Hive函数重要应用案例/06_hive 拉链表设计实现/01_拉链表的实现.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/01_HIVE表设计优化/01_分区表结构设计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/01_HIVE表设计优化/02_分桶表结构设计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/01_HIVE表设计优化/03_索引设计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/02_HIVE表数据优化/01_文件格式优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/02_HIVE表数据优化/02_数据压缩优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/02_HIVE表数据优化/03_小文件处理.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/02_HIVE表数据优化/04_ORC索引的使用.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/02_HIVE表数据优化/05_ORC矢量化查询.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/00_SQL方面优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/01_Explain extend selectSQL查询计划.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/02_MapReduce属性优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/03_join优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/04_关联优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/05_CBO优化器引擎+Analyze分析器.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/06_谓词下推PDD.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/07_group by数据倾斜优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/06_HIVE性能优化及HIVE3新特性/03_Job作业执行优化/08_join数据倾斜优化.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/01_ODS层/业务表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/01_ODS层/日志表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/02_DIM层/优惠券维度表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/02_DIM层/商品维度表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/02_DIM层/地区维度表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/02_DIM层/时间维度表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/02_DIM层/活动维度表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/02_DIM层/用户维度表-拉链表的设计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/优惠券领用事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/加购事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/支付事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/收藏事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/订单事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/订单明细事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/评价事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/退单事实表 .sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/业务数据表/退款事实表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/日志数据表/动作日志表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/日志数据表/启动日志表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/日志数据表/曝光日志.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/日志数据表/错误日志表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/03_DWD层/日志数据表/页面日志表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/04_DWS层/优惠券主题宽表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/04_DWS层/商品主题宽表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/04_DWS层/地区主题宽表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/04_DWS层/活动主题宽表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/04_DWS层/用户主题宽表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/04_DWS层/访客主题宽表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/05_DWT层/优惠券主题层.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/05_DWT层/商品主题层.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/05_DWT层/地区主题层.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/05_DWT层/活动主题层.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/05_DWT层/用户主题表.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/05_DWT层/访客主题层.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/优惠券主题/优惠券统计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/商品主题/商品复购率.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/商品主题/商品统计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/活动主题/活动统计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/用户主题/用户变化统计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/用户主题/用户留存率.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/用户主题/用户统计 .sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/用户主题/用户行为漏斗分析.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/订单主题/各地区订单统计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/订单主题/订单统计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/访客主题/访客统计.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/01_电商数仓4.0/06_ADS层/访客主题/路径分析.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Hive/07_实际应用/02_课设_当当网数据分析/数据清洗+装载+分析.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Hive/t_user/xx.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/01SQLcode.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/02选择，投影SQL.sql" dialect="Oracle" />
@@ -88,7 +158,7 @@
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/10PLSQL语法，分页.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-1PLSQL编程：游标存放多行记录.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-2PLSQL编程两种变量、if、loop、while、for.sql" dialect="Oracle" />
-    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-3函数cursor.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/11-3游标cursor.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/12-存储过程(函数).sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/13-触发器.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/src/main/Oracle/学习/Oracle高级部分.sql" dialect="OracleSqlPlus" />

@@ -36,3 +36,22 @@ overwrite
 table
 student_insert2
 select name;
+
+explain extended
+from student
+insert
+overwrite
+table
+student_insert1
+select num
+insert
+overwrite
+table
+student_insert2
+select name;
+
+select *
+from student_insert1;
+
+select *
+from student_insert2;

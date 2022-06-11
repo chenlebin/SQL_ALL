@@ -9,7 +9,7 @@ describe function extended isnull;
 
 --if条件判断: if(boolean testCondition, T valueTrue, T valueFalseOrNull)
 select if(1 = 2, 100, 200);--200
-select if(sex = '男', 'M', 'W')
+select *, if(sex = '男', 'M', 'W')
 from student
 limit 3;
 --可以利用if(,,)实现字段值替换
@@ -24,6 +24,7 @@ select isnotnull(null);
 
 --空值转换函数: nvl(T value, T default_value)
 select nvl("allen", "itcast");
+
 select nvl(null, "itcast");
 
 --非空查找函数: COALESCE(T v1, T v2, ...)

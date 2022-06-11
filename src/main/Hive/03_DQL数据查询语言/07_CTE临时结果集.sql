@@ -1,5 +1,5 @@
 -----------------Common Table Expressions（CTE）-----------------------------------
---select语句中的CTE
+--select语句中的CTE(临时结果集)
 use db_df2;
 with q1 as (select num, name, age from student where num = 95002)
 select *

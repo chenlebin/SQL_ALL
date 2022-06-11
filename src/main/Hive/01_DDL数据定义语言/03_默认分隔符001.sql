@@ -31,6 +31,10 @@ describe formatted db_df2.wzry_team;
 
 
 
+show databases;
+
+
+
 
 
 

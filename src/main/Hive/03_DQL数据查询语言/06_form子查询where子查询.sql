@@ -27,7 +27,7 @@ FROM (
 --（2）执行外部查询，并显示整个结果。　　
 SELECT *
 FROM student_hdfs
-WHERE student_hdfs.num IN (select num from student_local limit 2);
+WHERE student_hdfs.num IN (select num from student_local order by num desc limit 2);
 
 --相关子查询，指EXISTS和NOT EXISTS子查询
 --子查询的WHERE子句中支持对父查询的引用

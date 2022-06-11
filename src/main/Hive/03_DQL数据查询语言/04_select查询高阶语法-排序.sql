@@ -1,4 +1,7 @@
 ---------------Hive SQL select查询高阶语法------------------
+--todo 需要注意的是order by和 distribute by +sort by是可以指定ASC|DESC排序的
+-- 而cluster by只能是ASC默认正序没法指定倒序
+
 ---todo 1、order by
 --根据字段进行全局排序
 use db_df2;
@@ -17,6 +20,7 @@ order by deaths desc;
 
 --todo 强烈建议将LIMIT与ORDER BY一起使用。避免数据集行数过大
 --当hive.mapred.mode设置为strict严格模式时，使用不带LIMIT的ORDER BY时会引发异常。
+explain extended
 select *
 from t_usa_covid19_p
 where count_date = "2021-01-28"
@@ -29,10 +33,12 @@ limit 3;
 --cluster by 的分组规则是：HashFunc(字段)%ReduceTask个数和分桶规则和MapReduce的默认分组规则是一致的
 select *
 from student;
+
+
 --不指定reduce task个数
 --日志显示：Number of reduce tasks not specified. Estimated from input data size: 1
 select *
-from student cluster by num;
+from student cluster by num desc;
 
 --手动设置reduce task个数
 set mapreduce.job.reduces =2;
@@ -46,6 +52,7 @@ from student cluster by num;
 --错误
 select *
 from student cluster by sex order by age desc;
+
 select *
 from student cluster by sex sort by age desc;
 
@@ -54,8 +61,10 @@ select *
 from student distribute by sex sort by age desc;
 
 --下面两个语句执行结果一样
+--distribute by和sort by的字段是同一字段等同于cluster by
 select *
-from student distribute by num sort by num;
+from student distribute by num sort by num desc;
+
 select *
 from student cluster by num;
 

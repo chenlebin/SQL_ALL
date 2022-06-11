@@ -26,5 +26,5 @@ select
     --获取设备信号强度
     get_json_object(json, "$.signal")     as signal,
     --获取时间
-    get_json_object(json, "$.time")       as stime
+    get_json_object(json, "$.time") as time1
 from tb_json_test1;

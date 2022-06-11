@@ -35,4 +35,5 @@ SHOW MATERIALIZED VIEWS [IN database_name];
 DESCRIBE [EXTENDED | FORMATTED] [db_name.]materialized_view_name;
 
 */
+show materialized views
 
